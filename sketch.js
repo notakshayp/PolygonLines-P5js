@@ -25,6 +25,13 @@ function setup() {
   pointerLayer.clear();
 
 }
+function reset()
+{
+ createCanvas(windowWidth, windowHeight);
+  pointerLayer = createGraphics(windowWidth, windowHeight);
+  pointerLayer.clear();
+ 
+}
 
 function draw() {
   background(255);
@@ -92,8 +99,9 @@ if(abs(mouseX-start.x)<=24 && abs(mouseY-start.y)<=24)
 }
 
 function windowResized() {
+  reset();
 
-  resizeCanvas(windowWidth, windowHeight);
+ // resizeCanvas(windowWidth, windowHeight);
   
-  background(255, 255, 255);
+  //background(255, 255, 255);
 }
