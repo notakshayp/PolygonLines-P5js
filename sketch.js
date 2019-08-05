@@ -21,7 +21,7 @@ let col = {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  pointerLayer = createGraphics(width, height);
+  pointerLayer = createGraphics(windowWidth, windowHeight);
   pointerLayer.clear();
 
 }
@@ -94,6 +94,6 @@ if(abs(mouseX-start.x)<=24 && abs(mouseY-start.y)<=24)
 function windowResized() {
 
   resizeCanvas(windowWidth, windowHeight);
-  pointerLayer.resize(windowWidth, windowHeight);
+  
   background(255, 255, 255);
 }
